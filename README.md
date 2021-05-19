@@ -1,1 +1,1 @@
-# Tomato_Disease_prediction_using_CNN
+# Tomato leaf disease prediction using deep learning
