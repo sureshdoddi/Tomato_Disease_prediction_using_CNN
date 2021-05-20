@@ -1,4 +1,6 @@
 # Tomato leaf disease prediction using deep learning
+#Running TensorFlow using the CPU instead of GPU runs TensorFlow only on the CPU. By default TensorFlow uses available GPU resources to run.
+#Use tenserflow.compat.v1.ConfigProto() to run TensorFlow using the CPU instead of GPU 
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
 
