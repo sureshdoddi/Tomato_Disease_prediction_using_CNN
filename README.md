@@ -1,5 +1,7 @@
 # Tomato leaf disease prediction using deep learning
+
 from tensorflow.compat.v1 import ConfigProto
+
 #Running TensorFlow using the CPU instead of GPU runs TensorFlow only on the CPU. By default TensorFlow uses available GPU resources to run.
 #Use tenserflow.compat.v1.ConfigProto() to run TensorFlow using the CPU instead of GPU 
 #A CPU (central processing unit) works together with a GPU (graphics processing unit) to increase the throughput of data and the number of concurrent calculations within an application. ... Using the power of parallelism, a GPU can complete more work in the same amount of time as compared to a CPU.
