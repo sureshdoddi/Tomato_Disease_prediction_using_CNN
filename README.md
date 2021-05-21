@@ -7,11 +7,13 @@ from tensorflow.compat.v1 import ConfigProto
 
 from tensorflow.compat.v1 import InteractiveSession
 
+#The only difference with a regular Session is that an InteractiveSession installs itself as the default session on construction. The methods tf.Tensor.eval and tf.Operation.run will use that session to run ops.
+
 config = ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.2
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
-#Transfer Learning resnet1252V2 using Keras
+
 # import the libraries as shown below
 
 from tensorflow.keras.layers import Input, Lambda, Dense, Flatten
