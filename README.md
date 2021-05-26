@@ -1,34 +1,3 @@
-# Tomato leaf disease prediction using deep learning
-
-from tensorflow.compat.v1 import ConfigProto
-
-#Running TensorFlow using the CPU instead of GPU runs TensorFlow only on the CPU. By default TensorFlow uses available GPU resources to run.Use tenserflow.compat.v1.ConfigProto() to run TensorFlow using the CPU instead of GPU. A CPU (central processing unit) works together with a GPU (graphics processing unit) to increase the throughput of data and the number of concurrent calculations within an application. ... Using the power of parallelism, a GPU can complete more work in the same amount of time as compared to a CPU.
-
-
-from tensorflow.compat.v1 import InteractiveSession
-
-#The only difference with a regular Session is that an InteractiveSession installs itself as the default session on construction. The methods tf.Tensor.eval and tf.Operation.run will use that session to run ops.
-
-config = ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.2
-config.gpu_options.allow_growth = True
-session = InteractiveSession(config=config)
-
-# import the libraries as shown below
-
-from tensorflow.keras.layers import Input, Lambda, Dense, Flatten
-from tensorflow.keras.models import Model
-#from tensorflow.keras.applications.resnet152V2 import ResNet152V2
-#from keras.applications.vgg16 import VGG16
-from tensorflow.keras.applications.inception_v3 import preprocess_input
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.preprocessing.image import ImageDataGenerator,load_img
-from tensorflow.keras.models import Sequential
-import numpy as np
-from glob import glob
-# re-size all the images to this
-
-IMAGE_SIZE = [224, 224]
 
 train_path = '/content/drive/MyDrive/tomato_data/train'
 valid_path = '/content/drive/MyDrive/tomato_data/val'
