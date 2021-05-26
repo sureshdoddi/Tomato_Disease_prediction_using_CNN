@@ -1,6 +1,13 @@
 from tensorflow.compat.v1 import ConfigProto #Running TensorFlow using the CPU instead of GPU runs TensorFlow only on the CPU. By default TensorFlow uses available GPU resources to run.Use tenserflow.compat.v1.ConfigProto() to run TensorFlow using the CPU instead of GPU. A CPU (central processing unit) works together with a GPU (graphics processing unit) to increase the throughput of data and the number of concurrent calculations within an application. ... Using the power of parallelism, a GPU can complete more work in the same amount of time as compared to a CPU.
 
-from tensorflow.compat.v1 import InteractiveSession
+from tensorflow.compat.v1 import InteractiveSession #The only difference between Session and an InteractiveSession is that InteractiveSession makes itself the default session so that you can call run() or eval() without explicitly calling the session. 
+#sess = tf.InteractiveSession()
+#a = tf.constant(5.0)
+#b = tf.constant(6.0)
+#c = a * b
+## We can just use 'c.eval()' without passing 'sess'
+#print(c.eval())
+#sess.close()
 
 config = ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.2
