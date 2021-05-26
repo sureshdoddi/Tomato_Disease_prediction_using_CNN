@@ -10,8 +10,8 @@ from tensorflow.compat.v1 import InteractiveSession #The only difference between
 #sess.close()
 
 config = ConfigProto()
-config.gpu_options.per_process_gpu_memory_fraction = 0.2
-config.gpu_options.allow_growth = True
+config.gpu_options.per_process_gpu_memory_fraction = 0.2 #The first method is limiting the memory usage by percentage. So, for example, you can limit the application just only use 20% of your GPU memory. If you are using 8GB GPU memory, the application will be using 1.4 GB. (I am using Keras, so the example will be done in Keras way)
+config.gpu_options.allow_growth = True #This method is using allow_growth. This method will make the application allocate only as much GPU memory based on runtime allocation. So, the application will be using the GPU memory as needed.
 session = InteractiveSession(config=config)
 #Transfer Learning resnet1252V2 using Keras
 # import the libraries as shown below
