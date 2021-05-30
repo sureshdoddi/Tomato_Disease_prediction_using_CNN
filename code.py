@@ -16,7 +16,7 @@ session = InteractiveSession(config=config)
 #Transfer Learning resnet1252V2 using Keras
 # import the libraries as shown below
 
-from tensorflow.keras.layers import Input, Lambda, Dense, Flatten # 
+from tensorflow.keras.layers import Input, Lambda, Dense, Flatten #Dense layer -> Put data on different dimensions
 from tensorflow.keras.models import Model
 #from tensorflow.keras.applications.resnet152V2 import ResNet152V2
 #from keras.applications.vgg16 import VGG16
